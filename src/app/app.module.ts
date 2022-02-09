@@ -1,3 +1,4 @@
+import { TimelineComponent } from './timeline/timeline.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -8,6 +9,7 @@ import { UsuariosComponent } from './usuarios/usuarios.component';
 import { RegisterComponent } from './register/register.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { PopupComponent } from './popup/popup.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
     FormComponent,
     UsuariosComponent,
     RegisterComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    TimelineComponent,
+    PopupComponent
   ],
   imports: [
     BrowserModule,

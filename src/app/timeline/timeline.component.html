@@ -1,0 +1,27 @@
+
+<div class="logoutDiv">
+    <button class="logOut" [routerLink]="['..']">Log Out</button>
+</div>
+<div class="botonMil">
+<button (click)="onButtonClick()" >Add New mileStone</button>
+</div>
+
+<div class="lineaTemporal">
+
+    <div *ngFor="let data of data">
+    <div class="bloque {{ data.direccion }}" >
+        <div class="mileStone">
+            {{ data.date }}
+        </div>
+        <button class="icon fa fa-pencil" (click)="Tachar(data)"></button>
+            <div class="contenido {{data.tachar}}">
+            <h2>{{ data.title }}</h2>
+            <p>{{ data.text }}</p>
+            <button id= {{data.id}} class="icon x fa fa-trash {{data.direccion}}" (click)="Eliminar(data)"></button>
+            </div>
+    </div>
+</div>
+</div>
+<app-popup [shown]="showPopUp" (messageEvent)="receiveMessage($event)" ></app-popup>
+
+  

@@ -51,8 +51,13 @@ export class RegisterComponent implements OnInit {
       /* Aquí va el post */
       let newId = this.usuarios.length + 1
      let newIdText = newId.toString()
+
+     if(this.userSignup.status == 'VALID'){
       this._usuariosService.postUsuario(newIdText, this.userSignup.value.email, this.userSignup.value.password)
       alert('Usuario Registrado con éxito')
+    }else{
+      alert('introduzca todos los datos')
+    }
     }
    /*  this.usuarios */
   }

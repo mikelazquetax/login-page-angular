@@ -12,6 +12,7 @@ export class UsuariosComponent implements OnInit {
 
   constructor(private _usuariosService: UsuariosService) { }
   public usuarios: UserRegister[]
+  public correctLogin: boolean = false
  
 
   ngOnInit(): void {
@@ -34,6 +35,7 @@ export class UsuariosComponent implements OnInit {
       alert('Usuario no Registrado')
     }else if (found.length !== 0 && foundPass.length !== 0){
       alert('Bienvenido')
+      this.correctLogin = true
     }else if (found.length !== 0 && foundPass.length == 0){
       alert('Contraseña Incorrecta')
     }

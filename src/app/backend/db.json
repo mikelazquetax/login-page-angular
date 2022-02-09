@@ -19,6 +19,36 @@
       "id": "4",
       "email": "marcos@milestones.com",
       "password": "hola123"
+    },
+    {
+      "id": "5",
+      "email": "veronica@milestones.com",
+      "password": "hola444"
+    },
+    {
+      "id": "6",
+      "email": "marta@milestones.com",
+      "password": "hola123"
+    },
+    {
+      "id": "7",
+      "email": "luisito@milestones.com",
+      "password": "hola123"
+    },
+    {
+      "id": "8",
+      "email": "eduki@milestones.com",
+      "password": "hola123"
+    },
+    {
+      "id": "9",
+      "email": "lopez@milestones.com",
+      "password": "hola123"
+    },
+    {
+      "id": "10",
+      "email": "jaime@milestones.com",
+      "password": "hola123"
     }
   ]
 }

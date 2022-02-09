@@ -41,8 +41,10 @@
     </div>
     <div>
       <button class="botonLog" type="submit">LOG IN</button>
+     <!--  [routerLink]= "correctLogin === true  ?  ['/timeline'] : ['']" -->
+      <!-- *ngIf = "" [routerLink]="['/timeline/']" -->
     </div>
-
+   
   </form>
   <div>
     <button class="botonLog" [routerLink]="['/register/']">REGISTER NOW!  </button>
