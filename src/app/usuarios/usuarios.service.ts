@@ -6,11 +6,20 @@ import { Usuarios } from '../usuarios';
   providedIn: 'root'
 })
 export class UsuariosService {
-
+ 
   constructor(private _httpClient: HttpClient) { }
   private url = "http://localhost:3000/usuarios"
 
   getUsuarios(): Observable<Usuarios[]>{
     return this._httpClient.get<Usuarios[]>(this.url);
+  }
+  postUsuario(id:string, email:string, password:string){
+    this._httpClient.post(this.url,{
+      id: id,
+      email: email,
+      password : password
+    }).toPromise().then((data:any)=>{
+      console.log(data)
+    })
   }
 }

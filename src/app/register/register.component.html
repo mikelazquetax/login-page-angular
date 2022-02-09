@@ -1,8 +1,13 @@
 
 
 
+ 
+
 
     <div class="formulario">
+      <div class="botonback">
+      <button class="botonLog" [routerLink]="['..']">GO BACK TO LOGIN PAGE  </button>
+    </div>
         <h1 class="heading">Register New User</h1>
         <form novalidate (ngSubmit)="onNewUser($event)" [formGroup]="userSignup" autocomplete="off">
             <div>

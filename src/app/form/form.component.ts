@@ -42,7 +42,7 @@ export class FormComponent implements OnInit {
       }
      
        this.usuarioLogin.push(user)
-     
+     debugger
        this.messageEvent.emit(user)  
       console.log('Usuario registrado')
        console.log(user);

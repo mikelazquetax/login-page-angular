@@ -1,5 +1,24 @@
 {
-    "usuarios": [
-        {"id": 1, "email": "mikel@milestones.com", "password":"Patatas14!"}
-    ]
+  "usuarios": [
+    {
+      "id": "1",
+      "email": "mikel@milestones.com",
+      "password": "Patatas14!"
+    },
+    {
+      "id": "2",
+      "email": "maria@milestones.com",
+      "password": "hola1234"
+    },
+    {
+      "id": "3",
+      "email": "mario@milestones.com",
+      "password": "holacc43"
+    },
+    {
+      "id": "4",
+      "email": "marcos@milestones.com",
+      "password": "hola123"
+    }
+  ]
 }

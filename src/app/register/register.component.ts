@@ -41,7 +41,19 @@ export class RegisterComponent implements OnInit {
     this.submitted = true
     console.log(this.userSignup)
 
-    console.log(this.userSignup.value.email)
+   
+    const found =   this.usuarios.filter((item=> item.email == this.userSignup.value.email))
+    debugger
+    console.log(found)
+    if(found.length >= 1){
+      alert('Usuario ya Registrado')
+    }else{
+      /* Aquí va el post */
+      let newId = this.usuarios.length + 1
+     let newIdText = newId.toString()
+      this._usuariosService.postUsuario(newIdText, this.userSignup.value.email, this.userSignup.value.password)
+      alert('Usuario Registrado con éxito')
+    }
    /*  this.usuarios */
   }
 

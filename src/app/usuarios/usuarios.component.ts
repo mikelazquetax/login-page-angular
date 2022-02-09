@@ -31,6 +31,8 @@ export class UsuariosComponent implements OnInit {
    
     if (found.length == 0){
       alert('Usuario no Registrado')
+    }else{
+      alert('Bienvenido')
     }
     
     

@@ -4,10 +4,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { RegisterComponent } from './register/register.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { FormComponent } from './form/form.component';
+import { UsuariosComponent } from './usuarios/usuarios.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'form', pathMatch: 'full'},
-  {path: 'form', component: FormComponent},
+  {path: 'form', component: UsuariosComponent},
   {path: 'register', component: RegisterComponent},
   { path: '404', component: NotFoundComponent},
   { path: '**', redirectTo: '/404'}
