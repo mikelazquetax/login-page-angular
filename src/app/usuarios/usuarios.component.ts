@@ -28,11 +28,14 @@ export class UsuariosComponent implements OnInit {
     debugger
 
     const found =   this.usuarios.filter((item=> item.email == $event.email))
+    const foundPass = this.usuarios.filter((item=> item.password == $event.password))
    
     if (found.length == 0){
       alert('Usuario no Registrado')
-    }else{
+    }else if (found.length !== 0 && foundPass.length !== 0){
       alert('Bienvenido')
+    }else if (found.length !== 0 && foundPass.length == 0){
+      alert('Contraseña Incorrecta')
     }
     
     
