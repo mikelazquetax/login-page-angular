@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { PopupComponent } from './popup/popup.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +28,7 @@ import { PopupComponent } from './popup/popup.component';
     ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
+  
     
   ],
   providers: [],

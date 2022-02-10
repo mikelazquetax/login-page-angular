@@ -9,7 +9,7 @@ import { TimelineComponent } from './timeline/timeline.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'form', pathMatch: 'full'},
-  {path: 'form', component: UsuariosComponent},
+  {path: 'form', component: UsuariosComponent },
   {path: 'register', component: RegisterComponent},
   {path: 'timeline', component: TimelineComponent},
   { path: '404', component: NotFoundComponent},

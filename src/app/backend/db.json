@@ -3,52 +3,154 @@
     {
       "id": "1",
       "email": "mikel@milestones.com",
-      "password": "Patatas14!"
+      "password": "Patatas14!",
+      "milestones": [
+        {
+          "id": "1",
+          "date": "2022-02-09",
+          "title": "Milestone1",
+          "text": "Aquí no hay Playa",
+          "direccion": "derecha",
+          "tachar": ""
+        }
+      ]
     },
     {
       "id": "2",
       "email": "maria@milestones.com",
-      "password": "hola1234"
+      "password": "hola1234",
+      "milestones": [
+        {
+          "id": "1",
+          "date": "2022-02-09",
+          "title": "Milestone1",
+          "text": "Aquí no hay Playa",
+          "direccion": "derecha",
+          "tachar": ""
+        }
+      ]
     },
     {
       "id": "3",
       "email": "mario@milestones.com",
-      "password": "holacc43"
+      "password": "holacc43",
+      "milestones": [
+        {
+          "id": "1",
+          "date": "2022-02-09",
+          "title": "Milestone1",
+          "text": "Aquí no hay Playa",
+          "direccion": "derecha",
+          "tachar": ""
+        }
+      ]
     },
     {
       "id": "4",
       "email": "marcos@milestones.com",
-      "password": "hola123"
+      "password": "hola123",
+      "milestones": [
+        {
+          "id": "1",
+          "date": "2022-02-09",
+          "title": "Milestone1",
+          "text": "Aquí no hay Playa",
+          "direccion": "derecha",
+          "tachar": ""
+        }
+      ]
     },
     {
       "id": "5",
       "email": "veronica@milestones.com",
-      "password": "hola444"
+      "password": "hola444",
+      "milestones": [
+        {
+          "id": "1",
+          "date": "2022-02-09",
+          "title": "Milestone1",
+          "text": "Aquí no hay Playa",
+          "direccion": "derecha",
+          "tachar": ""
+        }
+      ]
     },
     {
       "id": "6",
       "email": "marta@milestones.com",
-      "password": "hola123"
+      "password": "hola123",
+      "milestones": [
+        {
+          "id": "1",
+          "date": "2022-02-09",
+          "title": "Milestone1",
+          "text": "Aquí no hay Playa",
+          "direccion": "derecha",
+          "tachar": ""
+        }
+      ]
     },
     {
       "id": "7",
       "email": "luisito@milestones.com",
-      "password": "hola123"
+      "password": "hola123",
+      "milestones": [
+        {
+          "id": "1",
+          "date": "2022-02-09",
+          "title": "Milestone1",
+          "text": "Aquí no hay Playa",
+          "direccion": "derecha",
+          "tachar": ""
+        }
+      ]
     },
     {
       "id": "8",
       "email": "eduki@milestones.com",
-      "password": "hola123"
+      "password": "hola123",
+      "milestones": [
+        {
+          "id": "1",
+          "date": "2022-02-09",
+          "title": "Milestone1",
+          "text": "Aquí no hay Playa",
+          "direccion": "derecha",
+          "tachar": ""
+        }
+      ]
     },
     {
       "id": "9",
       "email": "lopez@milestones.com",
-      "password": "hola123"
+      "password": "hola123",
+      "milestones": [
+        {
+          "id": "1",
+          "date": "2022-02-09",
+          "title": "Milestone1",
+          "text": "Aquí no hay Playa",
+          "direccion": "derecha",
+          "tachar": ""
+        }
+      ]
     },
     {
       "id": "10",
       "email": "jaime@milestones.com",
-      "password": "hola123"
+      "password": "hola123",
+      "milestones": [
+        {
+          "id": "1",
+          "date": "2022-02-09",
+          "title": "Milestone1",
+          "text": "Aquí no hay Playa",
+          "direccion": "derecha",
+          "tachar": ""
+        }
+      ]
     }
   ]
 }
+
+
