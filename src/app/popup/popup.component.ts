@@ -20,7 +20,7 @@ export class PopupComponent implements OnInit  {
 @Input() idUser: string
 @Input() passwordUser: string
 @Input() arrayMiles: [] = []
-@Input() direccionUser: string
+
 
   public title: string = 'Default Name';
   public id: number = 0;
@@ -28,7 +28,9 @@ export class PopupComponent implements OnInit  {
   public text: string;
   public direccion: string;
   public data: popupModel[] = [];
- public contador: number = 0
+ public contador: number = 0;
+ public direccionUser: string
+ public arrayMiles2: [] = []
 
  public milesarrayforPut:[] = []
 
@@ -41,7 +43,16 @@ export class PopupComponent implements OnInit  {
   constructor( private _usuariosService: UsuariosService) { }
  
   ngOnInit(): void {
+    this._usuariosService.getUsuarios().subscribe((res:any)=>{
+     
+       console.log(res) 
+       const Usuario =  res.filter((miles:any)=>{
+        return miles.email == this.emailUser
+      })
+      this.arrayMiles2 = Usuario[0].milestones
+    })
 
+    
   }
 
   onButtonClick(){
@@ -60,25 +71,25 @@ export class PopupComponent implements OnInit  {
   }
 
   saveAction(event:any){
+    
     this.contador = this.contador + 1
-   console.log(this.title) 
-   debugger
+    console.log(this.title) 
 
-
-   if(this.direccionUser == undefined || this.direccionUser == 'derecha'){
-    this.direccion = 'izquierda'
-   }else{
-     this.direccion = 'derecha'
-   }
-
+    this.ngOnInit()
+    this.arrayMiles = this.arrayMiles2
 
    if(this.contador == 1){
-   this.arrayMiles.forEach((item)=>{
+   this.arrayMiles.forEach((item:any)=>{
      this.data.push(item)
+     
    })
   }
 
-this.id = this.arrayMiles.length + 1
+
+
+
+
+ this.id = this.arrayMiles.length + 1 
 
    const miles = {
      id : this.id.toString(),
@@ -97,8 +108,18 @@ this.id = this.arrayMiles.length + 1
     this.data.push(miles)
     this.shown = !this.shown
 
-   
-  
+   let contador = 0
+    this.data.forEach((dato)=>{
+      contador = contador + 1
+      dato.id = contador.toString()
+
+      if(contador % 2 == 0 ){
+       dato.direccion = 'derecha'
+       } else{
+         dato.direccion = 'izquierda'
+       }
+
+    })
 
     this._usuariosService.putUsuario(this.idUser , this.emailUser, this.passwordUser , this.data)
 

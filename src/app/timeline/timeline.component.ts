@@ -1,7 +1,7 @@
 import { ActivatedRoute, Router } from '@angular/router';
 
 import { popupModel } from './../models/popup.model';
-import { Component, EventEmitter, Output} from '@angular/core';
+import { Component, EventEmitter, Output, OnInit } from '@angular/core';
 import { UsuariosService } from '../usuarios/usuarios.service';
 
 
@@ -52,8 +52,8 @@ arrayMilestonesApi:[] = []
 
       this.passwordUser = Usuario[0].password
       this.idUser = Usuario[0].id
-
-      this.direccionUser = Usuario[0].milestones[Usuario[0].milestones.length - 1].direccion
+   
+     
       this.arrayMilestonesApi = Usuario[0].milestones
       let i: number = 0
      
@@ -70,7 +70,7 @@ arrayMilestonesApi:[] = []
 
   
  onButtonClick(){
-
+debugger
  this.showPopUp = true
 
 /* this.onoffEvent.emit(this.showPopUp)  */
@@ -78,9 +78,15 @@ arrayMilestonesApi:[] = []
 
   public Eliminar(data:any): void{
     console.log(this.data)
-  
+    let contador = 0
+    this.data.forEach((dato)=>{
+      contador = contador + 1
+      dato.id = contador.toString()
+    })
+  debugger
     const index = this.data.findIndex((item)=>item.id === data.id)
     const list = this.data.splice(index,1)
+    this._usuariosService.putUsuario(this.idUser , this.emailUser, this.passwordUser , this.data) 
   }
 
   public Tachar(data:any):void{
@@ -95,9 +101,10 @@ arrayMilestonesApi:[] = []
 
 
  receiveMessage($event:any){
-  debugger
-   this.data = $event
+
+   this.data = $event 
    this.showPopUp = false
+
  }
 
 

@@ -5,6 +5,6 @@ export interface popupModel{
     text: string;
     direccion: string;
     tachar: string
- 
+   
 }
 

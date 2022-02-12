@@ -124,46 +124,7 @@
       "id": "9",
       "email": "lopez@milestones.com",
       "password": "hola123",
-      "milestones": [
-        {
-          "id": "1",
-          "date": "2022-02-09",
-          "title": "Milestone1",
-          "text": "Aquí no hay Playa",
-          "direccion": "derecha",
-          "tachar": ""
-        },
-        {
-          "id": "2",
-          "title": "Default Name",
-          "date": "2022-02-12",
-          "direccion": "izquierda",
-          "tachar": ""
-        },
-        {
-          "id": "3",
-          "title": "Milestones2",
-          "date": "2022-02-18",
-          "text": "Si que hay playa",
-          "direccion": "derecha",
-          "tachar": "tachado"
-        },
-        {
-          "id": "4",
-          "title": "Milestones3",
-          "date": "2022-02-13",
-          "text": "si si",
-          "direccion": "izquierda",
-          "tachar": ""
-        },
-        {
-          "id": "5",
-          "title": "Milestones4",
-          "date": "2022-02-16",
-          "direccion": "derecha",
-          "tachar": ""
-        }
-      ]
+      "milestones": []
     },
     {
       "id": "10",
