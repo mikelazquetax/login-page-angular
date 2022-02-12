@@ -22,8 +22,14 @@ showPopUp: boolean = false;
 tachar: string;
 data: popupModel[] = []
 userLogged: string
-email:string = ''
+idUser:string = ''
+emailUser:string = ''
+passwordUser:string = ''
+direccionUser: string = ''
 arrayMilestonesApi:[] = []
+
+
+
   constructor(  private _usuariosService: UsuariosService, private route: ActivatedRoute) { 
 
   
@@ -32,7 +38,7 @@ arrayMilestonesApi:[] = []
   ngOnInit(): void {
      this.route.queryParams.subscribe((params:any)=>{
        console.log(params)
-       this.email = params.data
+       this.emailUser = params.data
      })
 
      this._usuariosService.getUsuarios().subscribe((res:any)=>{
@@ -40,12 +46,17 @@ arrayMilestonesApi:[] = []
       console.log(res)
       
     const Usuario =  res.filter((miles:any)=>{
-        return miles.email == this.email
+        return miles.email == this.emailUser
       })
       console.log(Usuario[0].milestones)
+
+      this.passwordUser = Usuario[0].password
+      this.idUser = Usuario[0].id
+
+      this.direccionUser = Usuario[0].milestones[Usuario[0].milestones.length - 1].direccion
       this.arrayMilestonesApi = Usuario[0].milestones
       let i: number = 0
-      debugger
+     
 
       this.arrayMilestonesApi.forEach((milestone:any)=>{
        this.data.push(milestone)
@@ -79,7 +90,7 @@ arrayMilestonesApi:[] = []
     }else{
       data.tachar = ''
     }
-   
+    this._usuariosService.putUsuario(this.idUser , this.emailUser, this.passwordUser , this.data)
   }
 
 

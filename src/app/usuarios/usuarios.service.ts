@@ -1,3 +1,4 @@
+import { popupModel } from './../models/popup.model';
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -22,4 +23,19 @@ export class UsuariosService {
       console.log(data)
     })
   }
+
+  putUsuario(id:string, email:string, password:string, milestones:popupModel[]){
+    this._httpClient.put(`http://localhost:3000/usuarios/${id}`,{
+      id: id,
+      email: email,
+      password : password,
+      milestones: milestones
+    }).toPromise().then((data:any)=>{
+      console.log(data)
+    })
+  }
+
+  
+
+
 }

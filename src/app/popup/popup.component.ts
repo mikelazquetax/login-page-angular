@@ -1,6 +1,7 @@
 
 import { popupModel } from './../models/popup.model';
 import { Component, OnInit, Output, EventEmitter, Input} from '@angular/core';
+import { UsuariosService } from '../usuarios/usuarios.service';
 
 
 
@@ -15,20 +16,29 @@ import { Component, OnInit, Output, EventEmitter, Input} from '@angular/core';
 export class PopupComponent implements OnInit  {
 //  public shown: boolean = false
 @Input() shown: boolean
+@Input() emailUser: string
+@Input() idUser: string
+@Input() passwordUser: string
+@Input() arrayMiles: [] = []
+@Input() direccionUser: string
+
   public title: string = 'Default Name';
   public id: number = 0;
   public date: Date;
   public text: string;
   public direccion: string;
   public data: popupModel[] = [];
- 
+ public contador: number = 0
+
+ public milesarrayforPut:[] = []
+
 
   message: string = "Hello"
 
   @Output() messageEvent = new EventEmitter<any>();
  
 
-  constructor() { }
+  constructor( private _usuariosService: UsuariosService) { }
  
   ngOnInit(): void {
 
@@ -50,17 +60,28 @@ export class PopupComponent implements OnInit  {
   }
 
   saveAction(event:any){
+    this.contador = this.contador + 1
    console.log(this.title) 
-   
-   if(this.direccion == undefined || this.direccion == 'derecha'){
+   debugger
+
+
+   if(this.direccionUser == undefined || this.direccionUser == 'derecha'){
     this.direccion = 'izquierda'
    }else{
      this.direccion = 'derecha'
    }
-   
+
+
+   if(this.contador == 1){
+   this.arrayMiles.forEach((item)=>{
+     this.data.push(item)
+   })
+  }
+
+this.id = this.arrayMiles.length + 1
 
    const miles = {
-     id : this.id,
+     id : this.id.toString(),
     title : this.title,
     date : this.date,
     text : this.text,
@@ -76,10 +97,15 @@ export class PopupComponent implements OnInit  {
     this.data.push(miles)
     this.shown = !this.shown
 
+   
+  
+
+    this._usuariosService.putUsuario(this.idUser , this.emailUser, this.passwordUser , this.data)
+
    this.messageEvent.emit(this.data)
 
    }
-   this.id = this.id + 1
+/*    this.id = this.id + 1 */
 
   }
 }
